@@ -12,9 +12,13 @@ public class Exercicio2 {
 		Scanner scan = new Scanner(System.in);
 		int[] valor = new int[3];
 
-		for (int i = 0; i < 3; i++) {
-			System.out.println("Insira " + (i + 1) + "° valor:");
-			valor[i] = scan.nextInt();
+		try {
+			for (int i = 0; i < 3; i++) {
+				System.out.println("Insira " + (i + 1) + "° valor:");
+				valor[i] = scan.nextInt();
+			}
+		}catch (Exception e) {
+			System.err.println("Insira somente números inteiros!");
 		}
 
 		int guarda = 0;

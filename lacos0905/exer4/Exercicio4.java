@@ -37,12 +37,17 @@ public class Exercicio4 {
 		int sexo = ' ';
 		
 		while(posicao < lista.length) {
-			System.out.println("Insira sua idade: ");
-			idade = scan.nextInt();
-			System.out.println("Insira seu sexo (1-feminino / 2-masculino / 3-Outros): ");
-			sexo = scan.nextInt();
-			System.out.println("opções (1 - calma / 2 - nervosa / 3 - agressiva)");
-			personalidade = scan.nextInt();
+			try {
+				System.out.println("Insira sua idade: ");
+				idade = scan.nextInt();
+				System.out.println("Insira seu sexo (1-feminino / 2-masculino / 3-Outros): ");
+				sexo = scan.nextInt();
+				System.out.println("opções (1 - calma / 2 - nervosa / 3 - agressiva)");
+				personalidade = scan.nextInt();
+			}catch (Exception e) {
+				System.err.println("Insira somente inteiros!");
+				break;
+			}
 			System.out.println("*************************************************************");
 			
 			lista[posicao] = new Pessoa(idade, sexo, personalidade);

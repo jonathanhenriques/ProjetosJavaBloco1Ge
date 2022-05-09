@@ -9,12 +9,18 @@ public class Exercicio1 {
 	
 	static Scanner scan = new Scanner(System.in);
 	public static void main(String... args) {
-		
 		int[] valor = new int[3];
 		int maiorValor = 0;
-		for(int i=0;i<3;i++) {
-			System.out.print("Insira " + (i+1) + " valor:");
-			valor[i] = scan.nextInt();
+		try {
+			
+			
+			for(int i=0;i<3;i++) {
+				System.out.print("Insira " + (i+1) + " valor:");
+				valor[i] = scan.nextInt();
+			}
+			
+		}catch (Exception e) {
+			System.err.println("Somente números inteiros!");
 		}
 		
 		for(int i=0;i<valor.length;i++) {

@@ -27,8 +27,13 @@ public class Exercicio3 {
 				if(idade > 50)
 				totalMais50Anos++;
 				
-			System.out.println("Informe sua idade: ");
-			idade = scan.nextInt();
+			try {
+				System.out.println("Informe sua idade: ");
+				idade = scan.nextInt();
+			}catch (Exception e) {
+				System.err.println("Insira somente números inteiros!");
+				idade = -99;
+			}
 		}
 		
 		System.out.printf("Menores de 21 anos: %d pessoas | Maiores de 50 anos: %d pessoas", total21Anos, totalMais50Anos);

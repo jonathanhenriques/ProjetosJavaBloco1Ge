@@ -16,8 +16,13 @@ public class Exercicio3 {
 		Scanner scan = new Scanner(System.in);
 		int idade = 0;
 		
-		System.out.println("Informe sua idade: ");
-		idade = scan.nextInt();
+		try {
+			System.out.println("Informe sua idade: ");
+			idade = scan.nextInt();
+		}catch (Exception e) {
+			System.err.println("Insira somente valores inteiros!");
+		}
+		
 		if(idade <= 9)
 			System.out.println("Sem categoria");
 		else if(idade >= 10 && idade <= 14)

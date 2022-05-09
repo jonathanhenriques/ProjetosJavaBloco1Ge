@@ -16,8 +16,13 @@ public class Exercicio5 {
 		int somaNumerosDigitados = 0;
 		
 		do {
-			System.out.print("Digite um número: ");
-			numero = scan.nextInt();
+			try {
+				System.out.print("Digite um número: ");
+				numero = scan.nextInt();
+			}catch (Exception e) {
+				System.err.println("Insira somente valores numéricos inteiros!");
+				numero = 0;
+			}
 			somaNumerosDigitados += numero;
 		}while(numero != 0);
 		

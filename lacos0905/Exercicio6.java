@@ -11,14 +11,19 @@ public class Exercicio6 {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		int numero;
+		int numero = 0;
 		int acumulador = 0;
 		double mediaMultiplosDe3 = 0;
 		int contator = 0;
 		
 		do {
-			System.out.print("Digite um número: ");
-			numero = scan.nextInt();
+			try {
+				System.out.print("Digite um número: ");
+				numero = scan.nextInt();
+			}catch(Exception e) {
+				System.err.println("Insira somente números inteiros!");
+				numero = 0;
+			}
 			if(numero != 0 && numero % 3 == 0) {
 				acumulador += numero;
 				contator++;

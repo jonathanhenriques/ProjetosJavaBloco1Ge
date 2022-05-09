@@ -13,8 +13,12 @@ public class Exercicio4 {
 		Scanner scan = new Scanner(System.in);
 		double valor = 0;
 		
-		System.out.println("Insira um número: ");
-		valor = scan.nextDouble();
+		try {
+			System.out.println("Insira um número: ");
+			valor = scan.nextDouble();
+		}catch (Exception e) {
+			System.err.println("Insira somente números!");
+		}
 		
 		if(valor % 2 == 0) {
 			System.out.println("Número é par!");
