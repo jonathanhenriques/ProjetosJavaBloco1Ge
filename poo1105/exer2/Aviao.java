@@ -39,7 +39,7 @@ public class Aviao {
 	}
 
 	public void informacaoesDoAviao() {
-		this.toString();
+		System.out.println(this.toString());
 	}
 
 	@Override
