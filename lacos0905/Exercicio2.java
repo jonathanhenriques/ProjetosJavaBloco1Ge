@@ -29,6 +29,8 @@ public class Exercicio2 {
 		}
 
 		System.out.printf("Pares: %d, e Ímpares: %d", pares, impares);
+		
+		scan.close();
 	}
 
 }
