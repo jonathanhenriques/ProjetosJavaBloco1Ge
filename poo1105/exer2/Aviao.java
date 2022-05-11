@@ -1,10 +1,14 @@
 package poo1105.exer2;
 
+import java.util.Scanner;
+
 public class Aviao {
 	private String companhiaAerea;
 	private String modelo;
 	private String cor;
 	private int numeroDeLugares;
+
+	static Scanner scan = new Scanner(System.in);
 
 	public Aviao(String companhiaAerea, String modelo, String cor, int numeroDeLugares) {
 		this.companhiaAerea = companhiaAerea;
@@ -13,20 +17,29 @@ public class Aviao {
 		this.numeroDeLugares = numeroDeLugares;
 	}
 
-	public String getCompanhiaAerea() {
-		return companhiaAerea;
+	public static Aviao descricaoDoAviao() {
+		System.out.println("Olá! Por favor, informe Companhia Aérea: ");
+		String companhiaAerea = scan.next();
+		System.out.println("Informe modelo do Avião: ");
+		String modelo = scan.next();
+		System.out.println("Informe cor do Avião: ");
+		String cor = scan.next();
+		int numerDeLugares = 0;
+		try {
+		
+			System.out.println("Informe número de lugares: ");
+			numerDeLugares = scan.nextInt();
+
+		}catch (Exception e) {
+			System.err.println("Insira somente números inteiros!");
+		}
+		
+		Aviao aviao = new Aviao(companhiaAerea, modelo, cor, numerDeLugares);
+		return aviao;
 	}
 
-	public String getModelo() {
-		return modelo;
-	}
-
-	public String getCor() {
-		return cor;
-	}
-
-	public int getNumeroDeLugares() {
-		return numeroDeLugares;
+	public void informacaoesDoAviao() {
+		this.toString();
 	}
 
 	@Override
