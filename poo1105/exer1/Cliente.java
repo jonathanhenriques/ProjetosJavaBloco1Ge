@@ -1,9 +1,13 @@
 package poo1105.exer1;
 
+import java.util.Scanner;
+
 public class Cliente {
 	private String nome;
 	private String telefone;
 	private int idade;
+	
+	static Scanner scan = new Scanner(System.in);
 	
 	public Cliente(String nome, String telefone, int idade) {
 		this.nome = nome;
@@ -21,6 +25,25 @@ public class Cliente {
 	
 	public int getIdade() {
 		return idade;
+	}
+	
+	public static Cliente cadastraCliente() {
+		int idade = 0;
+
+		System.out.println("Olá, informe seu nome: ");
+		String nome = scan.nextLine();
+		try {
+			System.out.println(nome + ", Insira sua idade: ");
+			idade = scan.nextInt();
+		} catch (Exception e) {
+			System.err.println("Insira somente números!");
+		}
+		System.out.println("Agora insira seu telefone: [99999-9999]");
+		scan.nextLine();
+		String telefone = scan.next();
+
+		Cliente cliente = new Cliente(nome, telefone, idade);
+		return cliente;
 	}
 	
 	@Override
