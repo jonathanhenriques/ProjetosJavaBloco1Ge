@@ -29,7 +29,7 @@ public class Patinete {
 	}
 	
 	public void informacoesPatinete() {
-		System.out.println(this.toString());;
+		System.out.println(this.toString());
 	}
 	
 	@Override
