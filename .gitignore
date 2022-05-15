@@ -1,3 +1,4 @@
+.gitignore
 entrada/
 /.metadata/
 ##############################
@@ -11,6 +12,7 @@ entrada/
 *.nar
 hs_err_pid*
 replay_pid*
+*.docx
 
 ##############################
 ## Eclipse
